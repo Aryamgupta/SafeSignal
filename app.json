@@ -1,17 +1,22 @@
 {
   "expo": {
     "name": "safeSignal-app",
-    "slug": "safeSignal-app",
+    "slug": "safe-signal-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/safeSignal.png",
     "scheme": "safesignalapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aryam-gupta-04.safeSignalapp"
     },
     "android": {
+      "permissions": [
+        "CAMERA",
+        "CAMERA"
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -19,7 +24,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.aryam_gupta_04.safeSignalapp"
     },
     "web": {
       "output": "static",
@@ -43,6 +49,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "7efbec49-6162-40bc-a90e-91cf039556cf"
+      }
+    },
+    "owner": "aryamgupta04s-organization"
   }
 }

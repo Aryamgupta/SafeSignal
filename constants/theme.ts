@@ -5,28 +5,6 @@
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
-export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-  },
-};
-
 export const Fonts = Platform.select({
   ios: {
     /** iOS `UIFontDescriptorSystemDesignDefault` */
@@ -51,3 +29,27 @@ export const Fonts = Platform.select({
     mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
 });
+export const COLORS = {
+  background: "#121212", // Deeper black
+  surface: "#1E1E1E",    // Card/Surface color
+  surfaceLight: "#2A2A2A",
+  primary: "#FF5252",    // Vibrant Coral/Red
+  primaryGlow: "rgba(255, 82, 82, 0.3)",
+  secondary: "#4DB6AC",  // Teal-ish Teal
+  accent: "#FFD740",     // Gold/Yellow for status
+  textPrimary: "#FFFFFF",
+  textSecondary: "#B0B0B0",
+  success: "#4CAF50",
+  danger: "#F44336",
+  border: "#333333",
+  primaryButtonBackground: "#FF5252",
+  actionColor: "#4DB6AC",
+  cardBackground: "#1E1E1E",
+  blurBackground: "rgba(30, 30, 30, 0.8)",
+  card: "#1E1E1E",
+};
+
+export const SIZES = {
+  radius: 20,
+  padding: 16,
+};

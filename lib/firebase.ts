@@ -2,9 +2,10 @@ import { getApps, initializeApp } from "firebase/app";
 import { 
   initializeAuth, 
   getReactNativePersistence, 
-  browserLocalPersistence,
   getAuth
 } from "firebase/auth";
+// @ts-ignore
+import { browserLocalPersistence } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { MMKVPersistence } from "@/storage/firebasePersistence";
 import { Platform } from "react-native";
@@ -32,10 +33,11 @@ const authInstance = getApps().length === 0
   ? initializeAuth(app, {
       persistence: Platform.OS === 'web' 
         ? browserLocalPersistence 
+      persistence: Platform.OS === 'web'
+        ? browserLocalPersistence
         : getReactNativePersistence(MMKVPersistence as any),
     })
   : getAuth(app);
 
 export const auth = authInstance;
 export const db = getFirestore(app);
-```
